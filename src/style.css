@@ -1,0 +1,140 @@
+
+/* Universal */
+* {
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #DDD;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    border-bottom: solid #0D1114 1px;
+    margin: 0 20px 0 20px;
+}
+
+header a {
+    display: inline;
+    max-width: 10%;
+}
+
+.logo {
+    max-width: 80%;
+    height: auto;
+    padding: 10px 0 0 10px;
+    margin: 0;
+    flex-basis: 300px;
+    transition: transform .2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.025);
+}
+
+nav {
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    gap: 4rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    transition: transform .1s ease;
+}
+
+.nav-link:hover {
+    transform: scale(1.05);
+}
+
+.nav-link:hover a {
+    color: #D12229;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: #0D1114;
+    font-size: 1.25rem;
+    white-space: nowrap;
+    transition: color .01s ease;
+}
+
+.btn {
+    display: flex;
+    border: none;
+    border-radius: 16px;
+    width: 200px;
+    height: 50px;
+    background-color: #D12229;
+    color: #DDD;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: transform .1s ease;
+}
+
+.btn span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(1.03);
+}
+
+/* Hero */
+.background {
+    position: absolute;
+    top: 140px;
+    left: 0;
+    right: 0;
+    height: 700px;
+    width: auto;
+    background-image: url("../assets/banner.png");
+    filter: blur(15px);
+    z-index: -1;
+}
+
+.hero {
+    min-height: 720px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-family: Goldman, sans;
+    font-size: 5rem;
+    color: #DDD;
+}
+
+.hero h3 {
+    font-family: Goldman, sans;
+    font-size: 2rem;
+    color: #DDD;
+}
+
+/* Featured */
+
+/* Team */
+
+/* Footer */
