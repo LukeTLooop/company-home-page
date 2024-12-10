@@ -2,6 +2,7 @@
 /* Universal */
 * {
     font-family: Quicksand, Arial, Helvetica, sans-serif;
+    color: #0D1114;
     margin: 0;
     padding: 0;
 }
@@ -14,10 +15,23 @@ body {
     background-color: #DDD;
 }
 
+h3 {
+    text-align: center;
+    margin-top: 7rem;
+    font-size: 2rem;
+}
+
 /* Header */
+@media only screen and (max-width: 800px) {
+    nav {
+        display: none;
+    }
+}
+
 header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-bottom: solid #0D1114 1px;
     margin: 0 20px 0 20px;
 }
@@ -29,6 +43,7 @@ header a {
 
 .logo {
     max-width: 80%;
+    min-width: 100px;
     height: auto;
     padding: 10px 0 0 10px;
     margin: 0;
@@ -38,10 +53,6 @@ header a {
 
 .logo:hover {
     transform: scale(1.025);
-}
-
-nav {
-    margin: 0 auto;
 }
 
 .nav {
@@ -65,8 +76,8 @@ nav {
 
 .nav-link a {
     text-decoration: none;
-    color: #0D1114;
     font-size: 1.25rem;
+    font-weight: 600;
     white-space: nowrap;
     transition: color .01s ease;
 }
@@ -83,6 +94,7 @@ nav {
     justify-content: center;
     gap: 15px;
     transition: transform .1s ease;
+    font-weight: 600;
 }
 
 .btn span {
@@ -103,10 +115,10 @@ nav {
 /* Hero */
 .background {
     position: absolute;
-    top: 140px;
+    top: 0;
     left: 0;
     right: 0;
-    height: 700px;
+    height: 80vh;
     width: auto;
     background-image: url("../assets/banner.png");
     filter: blur(15px);
@@ -114,11 +126,12 @@ nav {
 }
 
 .hero {
-    min-height: 720px;
+    min-height: 80vh;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .hero h1 {
@@ -130,11 +143,64 @@ nav {
 .hero h3 {
     font-family: Goldman, sans;
     font-size: 2rem;
+    margin-top: 50px;
     color: #DDD;
 }
 
+@media only screen and (max-width: 800px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero h3 {
+        margin-top: 20px;
+        font-size: 1.5rem;
+    }
+}
+
 /* Featured */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 60px;
+    padding: 50px 100px;
+    align-items: center;
+}
+
+.box {
+    width: 100%;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#gallery .box:last-child {
+    grid-column: 1 / 3;
+    max-width: 50%;
+    height: auto;
+    justify-self: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .grid {
+        padding: 0;
+    }
+    .box {
+        grid-column: 1 / 3;
+    }
+
+    #gallery .box:last-child {
+        max-width: 100%;
+    }
+}
 
 /* Team */
+#team h3 {
+    margin-top: 3rem;
+}
 
 /* Footer */
